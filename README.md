@@ -1,23 +1,36 @@
-=======
-ATEDI
-=========
+# ATEDI
 
-# Download
+## Download
 Open your CMD and copy this line : 
 ```
 git clone https://github.com/ndlaprovidence/Atedi.git
 ```
 
-# Install
+## Install
 When download is complete, open your CMD 
 and execute these commands :
+
 ```
 cd atedi
+```
+
+* composer.json pour PHP 7.4
+    ```json
+    "ob/highcharts-bundle": "^1.7",
+    ```
+
+* composer.json pour PHP 8
+    ```json
+    "94noni/highcharts-bundle": "^2.0",
+    ```
+
+
+```
 composer install
 ```
 (Composer is free to download at this link : https://getcomposer.org/download/)
 
-# Create database
+## Create database
 Start a DBMS like MySQL included into Wamp server (free to download at this link : http://www.wampserver.com/)
 
 Then copy .env file to .env.local 
@@ -34,7 +47,7 @@ Finaly, execute this line :
 php bin/console doctrine:database:create
 ```
 
-# Load database
+## Load database
 There are some default datau that you can load into the database. Open your CMD in the Atedi directory and copy these lines :
 ```
 php bin/console doctrine:migrations:migrate
@@ -43,14 +56,14 @@ php bin/console doctrine:migrations:migrate
 php bin/console doctrine:fixtures:load
 ```
 
-# Run
+## Run
 Once you've installed everything, execute this line in the atedi directory :
 ```
 php -S localhost:8000 -t public
 ```
 You can access to your local server with localhost:8000
 
-# Sign in
+## Sign in
 Next, you will have to connect with the default admin account.
 
 * Email : admin@gmail.com
